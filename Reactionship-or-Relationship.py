@@ -15,7 +15,6 @@ import re
 
 sender_name = 'washeem'
 
-
 # In[2]:
 
 
@@ -59,17 +58,7 @@ def dm_stats_generator(list_of_msgs):
                 recieved_not_a_text_msg = recieved_not_a_text_msg + 1
     return sent_not_a_text_msg,recieved_not_a_text_msg,recieved_content,sent_content
 
-
-# In[3]:
-
-
-## Lets see all the folder names in the directory
-folder_names_list = os.listdir()
-# display(folder_names_list)
-
-
 # In[4]:
-
 
 folder_name_of_interest = 'messages'
 folder_name_of_interest_contents = os.listdir(folder_name_of_interest)
@@ -92,7 +81,7 @@ for contacts in contacts_msged:
     data = read_my_data(first,second)
     list_of_msgs = data['messages']
     
-#     display(list_of_msgs)
+    # display(list_of_msgs)
 
     ## IF YOU DONT KNOW YOUR INSTA NAME, 
     ## UNCOMMENT THE DISPLAY LINE ABOVE
@@ -215,8 +204,7 @@ print('You want a Rship with ' + str(len(insta_df_i_rsh_they_rxn)) + '/' + str(l
 print( str(len(insta_df_they_more_excited)) + '/' + str(len(insta_df)) + ' Are more excited to talk to you than you are to them' )
 print('You may have trouble sparking a convo with ' + str(len(insta_df_trbl_them_responding)) + '/' + str(len(insta_df)) + ' of ppl ' )
 print(str(len(insta_df_they_excite_u)) + '/' + str(len(insta_df)) + ' Excite You!' )
-print(str(len(insta_df_they_bore_u)) + '/' + str(len(insta_df)) + ' Bore you' )
-
+print(str(len(insta_df_they_bore_u)) + '/' + str(len(insta_df)) + ' Bore each other' )
 
 # In[ ]:
 
